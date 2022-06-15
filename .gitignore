@@ -1,0 +1,6 @@
+
+api/.idea/modules.xml
+*.xml
+api/.DS_Store
+api/app/.DS_Store
+.DS_Store
