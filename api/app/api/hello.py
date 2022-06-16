@@ -1,10 +1,10 @@
 from flask import jsonify, request
 from . import api
-from ..forms.book import SearchForm
+from app.forms.book import SearchForm
 import time
 
 
-@api.route("/hello")
+@api.route("/v1/hello")
 def get_one_json():
   form = SearchForm(request.args)
   if form.validate():
@@ -16,12 +16,15 @@ def get_one_json():
     return jsonify(form.errors)
 
 
-@api.route("/test")
+@api.route("/v1/test")
 def test():
   # pass
+
   return jsonify({
     "date": time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
     "author": "SapereAude",
     "age": 22,
     "country": "China"
   })
+
+

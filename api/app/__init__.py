@@ -1,7 +1,7 @@
 from flask import Flask
 from . import secure
 from . import setting
-from app.models.book import db
+from app.models.base import db
 
 
 def create_app():

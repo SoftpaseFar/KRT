@@ -1,7 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from app.models.base import db
 
 
 class Book(db.Model):
@@ -9,6 +7,7 @@ class Book(db.Model):
   title = Column(String(50), nullable=False)
   author = Column(String(30), default='未名')
   isbn = Column(String(15), nullable=False, unique=True)
+  test = Column(String(30), default='测试')
 
   def sample(self):
     pass
