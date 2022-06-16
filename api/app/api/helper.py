@@ -36,3 +36,9 @@ def get_info_from_id():
       'status': '211',
       'msg': form.errors
     })
+
+
+# 学生信息认证
+@api.route("/v1/helper/student_info", methods=['POST'])
+def get_info_from_student_code():
+  pass
