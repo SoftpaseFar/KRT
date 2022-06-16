@@ -4,3 +4,5 @@ api/.idea/modules.xml
 api/.DS_Store
 api/app/.DS_Store
 .DS_Store
+api/app/secure.py
+api/app/secure.py
