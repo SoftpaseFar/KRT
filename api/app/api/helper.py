@@ -4,6 +4,8 @@ from app.forms.weather import WeatherForm
 from app.spider.weather import get_weather
 from app.forms.id_ocr import IdInfoForm
 from app.spider.id_ocr import ver_id_info
+from app.forms.stu_ver import StuVerForm
+from app.spider.stu_cer import certificate
 
 
 # 根据经纬度获取7天天气
@@ -41,9 +43,18 @@ def get_info_from_id():
 # 学生信息认证
 @api.route("/v1/helper/student_info", methods=['POST'])
 def get_info_from_student_code():
+  form = StuVerForm(request.args)
+  if form.validate():
+    res = certificate(form.verif_code.data)
+    return jsonify(res)
+  else:
+    return jsonify({
+      'status': '211',
+      'msg': form.errors
+    })
 
-  pass
 
 
 # 短信验证码
 # https://market.cloud.tencent.com/products/32818
+# verif_code = 'AUBGKX3N00G7H3BC'
