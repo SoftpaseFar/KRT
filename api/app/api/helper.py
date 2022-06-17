@@ -41,4 +41,9 @@ def get_info_from_id():
 # 学生信息认证
 @api.route("/v1/helper/student_info", methods=['POST'])
 def get_info_from_student_code():
+
   pass
+
+
+# 短信验证码
+# https://market.cloud.tencent.com/products/32818
