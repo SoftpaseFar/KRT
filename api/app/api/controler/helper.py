@@ -8,6 +8,10 @@ from app.forms.stu_ver import StuVerForm
 from app.spider.stu_cer import certificate
 from app.api.service.sms_ver import sms_ver_service
 from app.forms.sms_ver import SMSVerForm
+from app.forms.text_classify import TextClassifyForm
+from app.libs.httper import text_category
+from app.forms.text_emotion import EmotionAnalysisForm
+from app.libs.httper import text_emo
 
 
 # 根据经纬度获取7天天气
@@ -55,13 +59,47 @@ def get_info_from_student_code():
     })
 
 
-# 短信验证码
+# 发送短信
 @api.route("/v1/helper/sms_ver_code", methods=['POST'])
 def get_sms_ver_code():
   form = SMSVerForm(request.args)
   if form.validate():
     res = sms_ver_service(form.mobile.data, form.code.data)
     res["status"] = res.pop("code")
+    return jsonify(res)
+  else:
+    return jsonify({
+      'status': '211',
+      'msg': form.errors
+    })
+
+
+# 验证短信
+# TODO
+
+
+# 文本打标签
+@api.route("/v1/helper/text_categorization", methods=['POST'])
+def text_categorization():
+  form = TextClassifyForm(request.args)
+  if form.validate():
+    res = text_category(form.content.data, form.title.data)
+    res['status'] = 200
+    return jsonify(res)
+  else:
+    return jsonify({
+      'status': '211',
+      'msg': form.errors
+    })
+
+
+# 文本情感分析
+@api.route("/v1/helper/text_emotion", methods=['POST'])
+def text_categorization():
+  form = EmotionAnalysisForm(request.args)
+  if form.validate():
+    res = text_emo(form.string.data)
+    res['status'] = 666
     return jsonify(res)
   else:
     return jsonify({

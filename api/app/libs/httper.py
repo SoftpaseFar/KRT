@@ -41,3 +41,39 @@ def ali_api_request(mobile, param):
 
   res = requests.post(url=res_url, headers=headers, data=data)
   return res.json()
+
+
+# 阿里文本打标签
+def text_category(content, title):
+  res_url = 'http(s)://labels.market.alicloudapi.com/icredit_ai_nlp/text_label/v1'
+  headers = {
+    'Authorization': 'APPCODE ' + current_app.config["ALI_TEXT_CATEGORIZATION"],
+    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+  }
+
+  data = {
+    'CONTENT': content,
+    'COUNT': 5,
+    'TITLE': title
+  }
+
+  data = json.dumps(data)
+  res = requests.post(url=res_url, headers=headers, data=data)
+  return res.json()
+
+
+# 阿里文本情感分析
+def text_emo(string):
+  res_url = 'http(s)://aiemotion.market.alicloudapi.com/icredit_ai_nlp/text_emotion/v1'
+  headers = {
+    'Authorization': 'APPCODE ' + current_app.config["ALI_TEXT_EMOTION"],
+    'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+  }
+
+  data = {
+    'STRING': string,
+  }
+
+  data = json.dumps(data)
+  res = requests.post(url=res_url, headers=headers, data=data)
+  return res.json()
