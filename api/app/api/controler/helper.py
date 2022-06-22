@@ -95,7 +95,7 @@ def text_categorization():
 
 # 文本情感分析
 @api.route("/v1/helper/text_emotion", methods=['POST'])
-def text_categorization():
+def text_emotion():
   form = EmotionAnalysisForm(request.args)
   if form.validate():
     res = text_emo(form.string.data)
