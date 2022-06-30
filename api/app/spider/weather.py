@@ -10,7 +10,6 @@ def get_weather(latitude, longitude):
 
   url = host + path + '?' + query
 
-
   # header构建
   appcode = current_app.config["APPCODE"]
 

@@ -106,3 +106,5 @@ def text_emotion():
       'status': '211',
       'msg': form.errors
     })
+
+

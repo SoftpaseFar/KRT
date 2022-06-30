@@ -1,0 +1,5 @@
+# 常规配置
+
+TOKEN_EXPIRE_IN = 7200
+
+

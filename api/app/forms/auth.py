@@ -4,6 +4,11 @@ from wtforms.validators import Length, DataRequired, Email, ValidationError
 from app.models.user import User
 
 
+def code_is_not_empty(form, field):
+  if str(field.data).isspace():
+    raise ValidationError("没有code还想获取Token，做梦哦？")
+
+
 def validate_nickname(field):
   if User.query.filter_by(nickname=field.data).first():
     raise ValidationError("昵称已被注册")
@@ -39,7 +44,7 @@ class RegisterForm(Form):
     ])
 
 
-class LoginForm:
+class LoginForm(Form):
   email = StringField(
     label='email',
     validators=[
@@ -48,6 +53,7 @@ class LoginForm:
       Email(message='电子邮箱不符合规范'),
       validate_email
     ])
+
   password = PasswordField(
     label='password',
     validators=[
@@ -56,4 +62,11 @@ class LoginForm:
     ])
 
 
-
+# Token相关
+class TokenForm(Form):
+  code = StringField(
+    label='code',
+    validators=[
+      DataRequired(message='没有code还想获取Token，做梦哦？'),
+      code_is_not_empty
+    ])

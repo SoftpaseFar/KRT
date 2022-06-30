@@ -13,11 +13,17 @@ Page({
   },
   // 事件处理函数
   bindViewTap() {
-    wx.navigateTo({
-      url: '../logs/logs',
+    wx.login({
+      success:function(res){
+        console.log(res['code'])
+      },
+      fail:function(res){
+        //console.log(res)
+      }
     })
   },
   onLoad() {
+    
     // @ts-ignore
     if (wx.getUserProfile) {
       this.setData({
@@ -40,6 +46,7 @@ Page({
   },
   getUserInfo(e: any) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
+  
     console.log(e)
     this.setData({
       userInfo: e.detail.userInfo,
