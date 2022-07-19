@@ -1,8 +1,8 @@
 from flask import jsonify, request
-from app.api.service.user_token import user_token_get
+from app.api.service.user_token import user_token_get, get_current_uid
 from app.models.base import db
 from app.api import api
-from app.forms.auth import RegisterForm, LoginForm, TokenForm
+from app.forms.auth import RegisterForm, LoginForm, TokenForm, TokenValForm
 from app.models.user import User
 
 
@@ -63,3 +63,17 @@ def token():
       'status': '211',
       'msg': "账号不存在或密码错误"
     })
+
+
+# Token使用测试 根据Token获取uid
+@api.route("/v1/user/token_test", methods=['POST'])
+def test_api_with_token():
+  form = TokenValForm(request.args)
+  if form.validate():
+    get_current_uid(form.token.data)
+    return jsonify()
+  else:
+    return jsonify({})
+
+
+# a96d0293db38854c17e5ad018971e059

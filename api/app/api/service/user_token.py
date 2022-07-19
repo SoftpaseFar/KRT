@@ -2,12 +2,11 @@ import hashlib
 import random
 import time
 import datetime
-from flask import current_app
+from flask import current_app, session
 import requests
 import json
 from app import db
 from app.models.user import User
-from flask import session
 
 
 # 设置缓存时间 分钟
@@ -117,3 +116,18 @@ def user_token_get(code):
       "msg": "获取成功",
       "token": token
     }
+
+
+def get_current_token_var(token, key):
+  var_s = session.get(token)
+  if not var_s:
+    raise Exception("token不存在或者失效")
+  else:
+    var_s = json.loads(var_s)
+    return var_s[key]
+
+
+# 根据token获取当前用户的uid
+def get_current_uid(token):
+  uid = get_current_token_var(token, "uid")
+  print(uid)

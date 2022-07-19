@@ -70,3 +70,12 @@ class TokenForm(Form):
       DataRequired(message='没有code还想获取Token，做梦哦？'),
       code_is_not_empty
     ])
+
+
+# Token验证
+class TokenValForm(Form):
+  token = StringField(
+    label='token',
+    validators=[
+      DataRequired(message='没有令牌，还想通过？'),
+    ])
