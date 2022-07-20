@@ -54,8 +54,8 @@
     </view>
     <view class="line"></view>
     <view class="list-item">
-      <image class="item-image" src="../../imgs/mine/guanyuwomen.png"></image>
-      <text class="item-text">关于我们</text>
+      <image class="item-image" src="../../imgs/mine/shimingrenzheng.png"></image>
+      <text class="item-text">认证中心</text>
       <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
     </view>
     <view class="line"></view>
