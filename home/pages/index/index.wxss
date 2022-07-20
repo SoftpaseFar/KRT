@@ -20,13 +20,9 @@
   display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
-  
-
 }
 
 .topest-location text {
- 
-
   margin: 10px auto;
 }
 
@@ -38,26 +34,35 @@
 
 
 .topest-publish {
-
-  width: 25%;
-  float: left;
   position: relative;
-
-
+  border: 2rpx solid slategrey;
+  float: left;
+  width: 23%;
+  border-radius: 5px;
+  margin: 0 1%;
 
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
-  background-color: #EFEFF4;
 
 }
+
+
+
+
 
 .topest-publish image {
 
   width: 50rpx;
   height: 50rpx;
-  margin: 20rpx;
+  align-self: center;
+  margin: 0 0 0 20rpx;
+}
+
+.topest-publish text{
+
+  margin: 10px auto;
 }
 
 
