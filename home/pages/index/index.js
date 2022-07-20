@@ -9,6 +9,10 @@ Page({
    * Page initial data
    */
   data: {
+    //顶部
+    top_loc_and_pub_style:"",
+    search_style:"width: 50%;",
+
     //轮播
     background: ['https://tse2-mm.cn.bing.net/th/id/OIP-C.0-8KaD4ntl-KaJrrb-S_KQHaGO?pid=ImgDet&rs=1', 'https://img.zcool.cn/community/01b6bb579393330000018c1b442807.jpg@1280w_1l_2o_100sh.jpg', 'https://img.zcool.cn/community/013d33579393330000012e7ec25322.jpg@1280w_1l_2o_100sh.jpg'],
     indicatorDots: true,
@@ -62,13 +66,17 @@ Page({
   // 使文本框进入可编辑状态
   showInput: function () {
     this.setData({
-      inputShowed: true //设置文本框可以输入内容
+      inputShowed: true, //设置文本框可以输入内容
+      top_loc_and_pub_style:"display: none;",
+      search_style:"width: 100%;",
     });
   },
   // 取消搜索
   hideInput: function () {
     this.setData({
-      inputShowed: false
+      inputShowed: false,
+      top_loc_and_pub_style:"",
+      search_style:"width: 50%;",
     });
   },
 

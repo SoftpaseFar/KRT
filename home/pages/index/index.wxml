@@ -1,8 +1,8 @@
 <view class="topest">
-  <view class="topest-location">
+  <view class="topest-location" style="{{top_loc_and_pub_style}}">
     <text>中国大地</text>
   </view>
-  <view class="topest-search">
+  <view class="topest-search" style="{{search_style}}">
 
     <!-- 搜索框 -->
     <view>
@@ -31,7 +31,7 @@
 
 
   </view>
-  <view class="topest-publish">
+  <view class="topest-publish" style="{{top_loc_and_pub_style}}">
     <image src="../../imgs/icons/publish.png"></image>
     <text>发布</text>
   </view>
@@ -49,8 +49,6 @@
 </view>
 
 <!-- 分类栏 -->
-
-
 <view class="banner">
   <scroll-view scroll-x="true" scroll-with-animation="true" scroll-into-view="nav-{{select > 0 ? select -1 : select}}">
     <view wx:for="{{sortList}}" wx:for-index="index" wx:key="index" id="nav-{{index}}" class="sort {{index == select ? 'choose' : ''}}" data-index='{{index}}' bindtap="activeTab">
