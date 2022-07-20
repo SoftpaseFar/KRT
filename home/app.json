@@ -28,12 +28,6 @@
         "selectedIconPath": "imgs/icons/message2.png"
       },
       {
-        "pagePath": "pages/publish/publish",
-        "text": "发布",
-        "iconPath": "imgs/icons/publish.png",
-        "selectedIconPath": "imgs/icons/publish2.png"
-      },
-      {
         "pagePath": "pages/mine/mine",
         "text": "我的",
         "iconPath": "imgs/icons/geren.png",
