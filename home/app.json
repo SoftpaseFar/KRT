@@ -1,8 +1,46 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/featured/featured",
+    "pages/message/message",
+    "pages/publish/publish",
+    "pages/mine/mine",
     "pages/logs/logs"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/icons/index.png",
+        "selectedIconPath": "imgs/icons/index2.png"
+      },
+      {
+        "pagePath": "pages/featured/featured",
+        "text": "精选",
+        "iconPath": "imgs/icons/featured.png",
+        "selectedIconPath": "imgs/icons/featured2.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "imgs/icons/message.png",
+        "selectedIconPath": "imgs/icons/message2.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "imgs/icons/publish.png",
+        "selectedIconPath": "imgs/icons/publish2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imgs/icons/geren.png",
+        "selectedIconPath": "imgs/icons/geren2.png"
+      }
+    ]
+  },
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
