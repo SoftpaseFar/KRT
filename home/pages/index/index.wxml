@@ -23,7 +23,7 @@
 
 <!-- 轮播图 -->
 <view>
-  <swiper indicator-dots="true" autoplay="true" duration="500" easing-function="easeInOutCubic">
+  <swiper class="carousel" indicator-dots="true" autoplay="true" duration="500" easing-function="easeInOutCubic">
     <block wx:for="{{background}}" wx:key="*this">
       <swiper-item>
         <image src="{{item}}"></image>
