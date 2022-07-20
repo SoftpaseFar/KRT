@@ -30,7 +30,7 @@
   <!-- 第三部分 -->
   <view class="view_3">
     <view class="list-item">
-      <image class="item-image" src="../images/test5.png"></image>
+      <image class="item-image" src="../../imgs/mine/yonghushezhi.png"></image>
       <text class="item-text">用户设置</text>
       <image class="image-jiantou" src="../images/jiantou.png"></image>
     </view>
