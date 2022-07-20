@@ -32,31 +32,31 @@
     <view class="list-item">
       <image class="item-image" src="../../imgs/mine/yonghushezhi.png"></image>
       <text class="item-text">用户设置</text>
-      <image class="image-jiantou" src="../images/jiantou.png"></image>
+      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
     </view>
     <view class="line"></view>
     <view class="list-item">
-      <image class="item-image" src="../images/test6.png"></image>
+      <image class="item-image" src="../../imgs/mine/fuwuzhongxin.png"></image>
       <text class="item-text">服务中心</text>
-      <image class="image-jiantou" src="../images/jiantou.png"></image>
+      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
     </view>
     <view class="line"></view>
     <view class="list-item">
-      <image class="item-image" src="../images/test8.png"></image>
-      <text class="item-text">版本更新</text>
-      <image class="image-jiantou" src="../images/jiantou.png"></image>
+      <image class="item-image" src="../../imgs/mine/gerenjianjie.png"></image>
+      <text class="item-text">个人简介</text>
+      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
     </view>
     <view class="line"></view>
     <view class="list-item">
-      <image class="item-image" src="../images/test9.png"></image>
+      <image class="item-image" src="../../imgs/mine/dingdanguanli.png"></image>
       <text class="item-text">订单管理</text>
-      <image class="image-jiantou" src="../images/jiantou.png"></image>
+      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
     </view>
     <view class="line"></view>
     <view class="list-item">
-      <image class="item-image" src="../images/test12.png"></image>
+      <image class="item-image" src="../../imgs/mine/guanyuwomen.png"></image>
       <text class="item-text">关于我们</text>
-      <image class="image-jiantou" src="../images/jiantou.png"></image>
+      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
     </view>
     <view class="line"></view>
   </view>
