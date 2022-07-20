@@ -1,26 +1,42 @@
-<!-- 搜索框 -->
-<view>
-     <view>
+<view class="topest">
+  <view class="topest-location">
+    <text>中国大地</text>
+  </view>
+  <view class="topest-search">
+
+    <!-- 搜索框 -->
+    <view>
+      <view>
+
         <view class="weui-search-bar">
-            <view class="weui-search-bar__form">
-            <!-- 最初始时的搜索框 -->
-                <view class="weui-search-bar__box">
-                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                    <input type="text" class="weui-search-bar__input" placeholder="搜索"/>
-                </view>
-                <!-- 可编辑时的搜索框 -->
-                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
-                    <icon class="weui-icon-search" type="search" size="14"></icon>
-                    <view class="weui-search-bar__text">搜索</view>
-                </label>
+          <view class="weui-search-bar__form">
+
+
+            <!-- 可编辑时的搜索框 -->
+            <view class="weui-search-bar__box">
+              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" />
             </view>
-            <!-- 取消搜索 -->
-            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+            <!-- 最初始时的搜索框 -->
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+            </label>
+          </view>
+          <!-- 取消搜索 -->
+          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
         </view>
+      </view>
     </view>
+
+
+  </view>
+  <view class="topest-publish">
+    <image src="../../imgs/icons/publish.png"></image>
+    <text>发布</text>
+  </view>
 </view>
-
-
+<view style="clear: both;height: 10rpx;"></view>
 <!-- 轮播图 -->
 <view>
   <swiper class="carousel" indicator-dots="true" autoplay="true" duration="500" easing-function="easeInOutCubic">
@@ -37,8 +53,7 @@
 
 <view class="banner">
   <scroll-view scroll-x="true" scroll-with-animation="true" scroll-into-view="nav-{{select > 0 ? select -1 : select}}">
-    <view wx:for="{{sortList}}" wx:for-index="index" wx:key="index" id="nav-{{index}}"
-      class="sort {{index == select ? 'choose' : ''}}" data-index='{{index}}' bindtap="activeTab">
+    <view wx:for="{{sortList}}" wx:for-index="index" wx:key="index" id="nav-{{index}}" class="sort {{index == select ? 'choose' : ''}}" data-index='{{index}}' bindtap="activeTab">
       {{item.name}}
       <view class="line" wx:if="{{index == select}}"></view>
     </view>
@@ -51,4 +66,3 @@
     </view>
   </swiper-item>
 </swiper>
-

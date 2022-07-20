@@ -1,9 +1,74 @@
 /* pages/index/index.wxss */
+/* 最顶端*/
+.topest {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10rpx;
+}
+
+
+.topest-location {
+  position: relative;
+  border: 2rpx solid slategrey;
+  float: left;
+  width: 23%;
+  border-radius: 5px;
+  margin: 0 1%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  
+
+}
+
+.topest-location text {
+ 
+
+  margin: 10px auto;
+}
+
+.topest-search {
+  float: left;
+  position: relative;
+  width: 50%;
+}
+
+
+.topest-publish {
+
+  width: 25%;
+  float: left;
+  position: relative;
+
+
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #EFEFF4;
+
+}
+
+.topest-publish image {
+
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+
+
 /* 轮播图*/
-.carousel image{
+.carousel image {
+  display: block;
   width: 100%;
   height: 100%;
 }
+
 
 /* 搜索框*/
 .weui-search-bar {
@@ -13,9 +78,9 @@
   display: -webkit-flex;
   display: flex;
   box-sizing: border-box;
-  background-color: #EFEFF4;
-  border-top: 1rpx solid #D7D6DC;
-  border-bottom: 1rpx solid #D7D6DC;
+  /* background-color: #EFEFF4; */
+  border-top: 1rpx solid #FFFFFF;
+  border-bottom: 1rpx solid #FFFFFF;
 }
 
 .weui-icon-search {
@@ -30,6 +95,7 @@
 }
 
 .weui-search-bar__text {
+  display: inline;
   display: inline-block;
   font-size: 16px;
 }
@@ -46,11 +112,13 @@
 
 .weui-search-bar__box {
   position: relative;
+  float: left;
   padding-left: 30px;
   padding-right: 30px;
   width: 100%;
   box-sizing: border-box;
   z-index: 1;
+
 }
 
 .weui-search-bar__input {
@@ -69,14 +137,14 @@
   border-radius: 3px;
   text-align: center;
   color: #9B9B9B;
-  background: #FFFFFF;
+  background-color: #EFEFF4;
+  /* background: #FFFFFF; */
   line-height: 28px;
 }
 
 .weui-search-bar__cancel-btn {
   margin-left: 10px;
   line-height: 28px;
-  color: #09BB07;
   white-space: nowrap;
 }
 
