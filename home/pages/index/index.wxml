@@ -60,7 +60,10 @@
 <swiper style="height:{{height}}px" current="{{select}}" duration="300" bindchange="activeSw">
   <swiper-item wx:for="{{sortList.length}}" wx:key="index">
     <view class="box">
-      <view class="place" wx:for="{{placeList}}" wx:key="index">{{index}}</view>
+      <view class="place" wx:for="{{placeList}}" wx:key="index">
+
+        <view class="banner-list"> {{index}}</view>
+      </view>
     </view>
   </swiper-item>
 </swiper>

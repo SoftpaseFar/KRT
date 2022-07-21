@@ -223,5 +223,14 @@ scroll-view .sort:last-child {
 }
 
 .place {
-  height: 800rpx;
+  /* height: 800rpx; */
+  margin-top: 20rpx;
+  /* margin-bottom: 20rpx; */
+}
+
+
+.banner-list{
+  width: 100%;
+  height: 100px;
+  background-color: springgreen;
 }
