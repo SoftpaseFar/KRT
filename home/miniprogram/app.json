@@ -1,6 +1,11 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/front_page/front_page",
+    "pages/featured/featured",
+    "pages/message/message",
+    "pages/index/index",
+    "pages/mine/mine",
+    "pages/publish/publish"
   ],
   "requiredBackgroundModes": ["audio"],
   "useExtendedLib": {
@@ -9,6 +14,34 @@
   "usingComponents": {
     "chat-box":"components/chatbox/index",
     "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/front_page/front_page",
+        "text": "首页",
+        "iconPath": "imgs/icons/index.png",
+        "selectedIconPath": "imgs/icons/index2.png"
+      },
+      {
+        "pagePath": "pages/featured/featured",
+        "text": "精选",
+        "iconPath": "imgs/icons/featured.png",
+        "selectedIconPath": "imgs/icons/featured2.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "imgs/icons/message.png",
+        "selectedIconPath": "imgs/icons/message2.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "imgs/icons/geren.png",
+        "selectedIconPath": "imgs/icons/geren2.png"
+      }
+    ]
   },
   "window": {
     "backgroundColor": "#F6F6F6",
