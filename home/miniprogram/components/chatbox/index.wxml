@@ -1,0 +1,56 @@
+<scroll-view class="cu-chat" scroll-y="true" enable-back-to-top enable-flex scroll-into-view="{{scrollId}}"
+  style="height:{{systemInfo.windowHeight - 50}}px;" bindscrolltoupper="tapTop">
+  <view wx:for="{{chatList}}" wx:key="index" wx:for-item="item">
+    <!--对方发送的信息-->
+    <view class="cu-item" wx:if="{{item.openid != openid && item.msgType == 'text'}}" id="msg-{{index}}">
+      <view class="cu-avatar radius" style="background-image:url({{item.userInfo.avatarUrl}});"></view>
+      <view class="main">
+        <view class="content bg-cyan shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="date">{{item._createTime}} {{item.userInfo.nickName}}</view>
+    </view>
+    <view class="cu-item" wx:if="{{item.openid != openid && item.msgType == 'image'}}" id="msg-{{index}}">
+      <view class="cu-avatar radius" style="background-image:url({{item.userInfo.avatarUrl}});"></view>
+      <view class="main" bindtap="viewImage" data-url="{{item.content}}">
+        <image src="{{item.content}}" class="radius" mode="widthFix"></image>
+      </view>
+      <view class="date">{{item._createTime}} {{item.userInfo.nickName}}</view>
+    </view>
+    <!--自己发送的信息-->
+    <view class="cu-item self" wx:if="{{item.openid == openid && item.msgType == 'text'}}" id="msg-{{index}}">
+      <view class="main">
+        <view class="content bg-green shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="cu-avatar radius" style="background-image:url({{item.userInfo.avatarUrl}});"></view>
+      <view class="date">{{item._createTime}} {{item.userInfo.nickName}}</view>
+    </view>
+    <view class="cu-item self" wx:if="{{item.openid == openid && item.msgType == 'image'}}" id="msg-{{index}}">
+      <view class="main" bindtap="viewImage" data-url="{{item.content}}">
+        <image src="{{item.content}}" class="radius" mode="widthFix"></image>
+      </view>
+      <view class="cu-avatar radius" style="background-image:url({{item.userInfo.avatarUrl}});"></view>
+      <view class="date">{{item._createTime}} {{item.userInfo.nickName}}</view>
+    </view>
+    <!--提示信息-->
+    <view class="cu-item " wx:if="{{item.type == 'notice'}}" id="msg-{{index}}">
+      <view class="cu-info round ">{{item.content}}!</view>
+    </view>
+    <!--带图标的提示信息-->
+    <view class="cu-item " wx:if="{{item.type == 'musicnotice'}}" id="msg-{{index}}">
+      <view class="cu-info">
+        <text class="cuIcon-roundclosefill text-red "></text> 对方拒绝了你的消息
+      </view>
+    </view>
+    <!--长提醒-->
+    <view class="cu-item " wx:if="{{item.type == 'longnotice'}}" id="msg-{{index}}">
+      <view class="cu-info">
+        对方开启了好友验证，你还不是他(她)的好友。请先发送好友验证请求，对方验证通过后，才能聊天。
+        <text class="text-blue">发送好友验证</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

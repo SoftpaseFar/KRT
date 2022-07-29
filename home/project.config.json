@@ -1,55 +1,69 @@
 {
-  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
-  "packOptions": {
-    "ignore": [],
-    "include": []
-  },
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
   "setting": {
-    "bundle": false,
-    "userConfirmedBundleSwitch": false,
     "urlCheck": true,
-    "scopeDataCheck": false,
-    "coverView": true,
     "es6": true,
+    "enhance": true,
     "postcss": true,
-    "compileHotReLoad": false,
-    "lazyloadPlaceholderEnable": false,
     "preloadBackgroundData": false,
     "minified": true,
-    "autoAudits": false,
-    "newFeature": false,
-    "uglifyFileName": false,
-    "uploadWithSourceMap": true,
-    "useIsolateContext": true,
+    "newFeature": true,
+    "coverView": true,
     "nodeModules": false,
-    "enhance": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
     "useApiHostProcess": true,
-    "showShadowRootInWxmlPanel": true,
-    "packNpmManually": false,
-    "enableEngineNative": false,
-    "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "showES6CompileOption": false,
-    "minifyWXML": true,
-    "useStaticServer": true,
-    "checkInvalidKey": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
+    "enableEngineNative": false,
+    "useIsolateContext": true,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": false,
+    "packNpmRelationList": [],
+    "minifyWXSS": true,
+    "showES6CompileOption": false,
+    "lazyloadPlaceholderEnable": false,
+    "useStaticServer": true,
     "disableUseStrict": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "minifyWXML": true
+  },
+  "appid": "wxce6a5c19d66a83de",
+  "projectname": "CloudChat",
+  "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        }
+      ]
+    }
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
-  "appid": "wxce6a5c19d66a83de",
-  "projectname": "miniprogram-92",
-  "condition": {},
+  "srcMiniprogramRoot": "miniprogram/",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "description": "Project configuration file, more information: https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
 }
