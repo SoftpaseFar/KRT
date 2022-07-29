@@ -92,6 +92,7 @@
   /* background-color: #EFEFF4; */
   border-top: 1rpx solid #FFFFFF;
   border-bottom: 1rpx solid #FFFFFF;
+  
 }
 
 .weui-icon-search {
@@ -233,4 +234,6 @@ scroll-view .sort:last-child {
   width: 100%;
   height: 100px;
   background-color: springgreen;
+  border-bottom: 5rpx solid slategrey;
+  border-top: 0.1rpx solid slategrey;
 }

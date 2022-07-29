@@ -62,7 +62,18 @@
     <view class="box">
       <view class="place" wx:for="{{placeList}}" wx:key="index">
 
-        <view class="banner-list"> {{index}}</view>
+        <view class="banner-list">
+          {{index}}
+        
+        
+        
+        
+        
+        
+        
+        
+          
+        </view>
       </view>
     </view>
   </swiper-item>
