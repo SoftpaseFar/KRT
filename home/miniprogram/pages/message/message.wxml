@@ -1,2 +1,26 @@
 <!--pages/message/message.wxml-->
-<text>message</text>
+<!--pages/message/message.wxml-->
+<block wx:for="{{message_category}}" wx:key="item">
+  <text bindtap="select_category" data-index="{{index}}" class="message-category" style="width: {{100/message_category.length + '%'}};color: {{scategory_elect_idx==index?'green':''}};">{{item}}</text>
+</block>
+
+<!-- scategory_elect_idx==index?'red':'black' -->
+<block wx:for="{{message_list}}" wx:key="item">
+  <view class="message-list" style="{{scategory_elect_idx==0?'':'display: none;'}}" bindtap="select_one_list" data-index="{{index}}">
+    <image class="message-list-img" src="../../imgs/other/img-test.png"></image>
+    <view class="message-list-info">
+      <view class="message-list-info-top">
+        <text class="message-list-info-top-left">{{item.name}}</text>
+        <text class="message-list-info-top-right">{{item.is_read?"":"未读"}}</text>
+      </view>
+      <view class="message-list-info-buttom">{{item.last_message}}</view>
+    </view>
+    <view class="message-list-date">{{item.date}}</view>
+  </view>
+
+</block>
+
+<view class="message-system" style="{{scategory_elect_idx==1?'':'display: none;'}}">
+  <image src="../../imgs/other/kongkongruye.jpeg" mode="widthFix"></image>
+  <text>空空如也</text>
+</view>

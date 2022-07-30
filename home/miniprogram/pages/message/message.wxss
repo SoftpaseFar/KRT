@@ -1,1 +1,112 @@
 /* pages/message/message.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.message-category {
+
+  position: sticky;
+  top: 0;
+  float: left;
+  display:flex;
+  height: 88rpx;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 15rpx solid rgb(240, 239, 239);
+  margin-bottom: 20rpx;
+}
+
+
+
+.message-list {
+
+  margin-top: 20rpx;
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-list-img {
+  width: 17%;
+  height: 100%;
+  float: left;
+  margin-left: 2%;
+  z-index: -1;
+}
+
+.message-list-info {
+  width: 51%;
+  float: left;
+  height: 100%;
+}
+
+
+.message-list-info-top {
+  width: 100%;
+  height: 50%;
+}
+
+.message-list-info-buttom {
+  width: 100%;
+  height: 50%;
+}
+
+.message-list-info-top-left {
+  margin-left: 2%;
+  font-weight: 600;
+}
+
+.message-list-info-top-right {
+  margin-left: 2%;
+  width: 30%;
+  height: 100%;
+  color: aliceblue;
+  background-color: red;
+  font-weight: 600;
+  font-size: small;
+}
+
+
+.message-list-info-buttom {
+  margin-left: 2%;
+  font-weight: 300;
+}
+
+
+.message-list-date {
+  width: 30%;
+  float: left;
+  height: 100%;
+  margin-right: 2%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.message-system{
+  width: 100%;
+}
+
+.message-system image{
+  margin-top: 20%;
+  width: 30%;
+  margin-left: 35%;
+  opacity: 0.3;
+}
+
+.message-system text{
+  font-weight: 100;
+  font-size:medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

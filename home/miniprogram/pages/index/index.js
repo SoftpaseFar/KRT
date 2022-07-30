@@ -28,11 +28,13 @@ Page({
       sizeType: ['compressed'],
       sourceType: ['album', 'camera'],
       success: res => {
-        console.log(res)
+        // console.log(res)
         wx.getFileSystemManager().readFile({
           filePath: res.tempFilePaths[0], //选择图片返回的相对路径
           encoding: 'base64', //编码格式
+
           success: res => { //成功的回调
+            console.log(777)
             var bufferData = res.data;
             wx.showLoading({
               title: '信息发送',
@@ -63,8 +65,15 @@ Page({
                 wx.hideLoading();
               }
             })
+          },
+          fail:res=>{
+            console.log(res)
           }
+
         })
+      },
+      fail: res => {
+        console.log("888")
       }
     })
   },
@@ -82,7 +91,7 @@ Page({
     wx.showActionSheet({
       itemList: ['A', 'B', 'C'],
       success(res) {
-        console.log(res.tapIndex)
+        // console.log(res.tapIndex)
       },
       fail(res) {
         console.log(res.errMsg)
@@ -151,7 +160,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.setNavigationBarTitle({
+      title: options.title,
+    });
+
     this.userAuth();
+    
+    this.setData({
+      // parseInt
+      roomId:parseInt(options.roomId)
+    });
+
   },
   userRegister(userInfo) {
     return new Promise(function (resolve, reject) {
@@ -176,7 +195,8 @@ Page({
     wx.cloud.callFunction({
       name: 'auth',
       success: res => {
-        console.log(res)
+        // console.log(res)
+        console.log("success")
 
         if (res.result.errCode == -1) {
           //
