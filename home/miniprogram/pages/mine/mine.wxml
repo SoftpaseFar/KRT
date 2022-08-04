@@ -63,3 +63,12 @@
 </view>
 
 
+
+<!-- 灯泡 -->
+<view class="war_pop">
+  <view class="box">
+    <view class="box_view"></view>
+  </view>
+</view>
+
+

@@ -1,1 +1,35 @@
 /* pages/featured/featured.wxss */
+/*
+返回主页面navigator
+*/
+.backIndex{
+  width: 200rpx;
+  border: 1rpx solid #efefef;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 30rpx;
+  margin-left: 40rpx;
+}
+.work-item{
+  display: flex;
+  padding: 15rpx;
+  border:1rpx solid #efefef;
+  border-radius: 8rpx;
+  box-shadow: 1rpx 1rpx 15rpx;
+  margin: 15rpx;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 30rpx;
+}
+.work-title{
+  font-weight: bold;
+}
+.contactUs{
+  border: 1rpx solid #efefef;
+  margin-right: 10rpx;
+  height: 45rpx;
+  text-align: center;
+}

@@ -1,2 +1,15 @@
 <!--pages/featured/featured.wxml-->
-<text>pages/featured/featured.wxml</text>
+
+<!--精选推荐列表-->
+<view class="work-item" wx:for="{{workList}}" wx:key="id">
+  <view class="info">
+    <text class="work-title">{{item.name}}</text>
+    <text>电话：{{item.phone}}</text>
+    <text>地址：{{item.address}}</text>
+    <text>薪资：{{item.salary}}</text>
+    <text>详细说明：{{item.exactInfo}}</text>
+  </view>
+  <view class="contactUs">联系我们</view>
+</view>
+
+

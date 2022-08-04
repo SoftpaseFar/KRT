@@ -5,7 +5,15 @@ Page({
    * Page initial data
    */
   data: {
-
+    workList:[
+      {phone:11111,name:'陪诊',address:'山东省济宁市人民医院',salary:200,exactInfo:'8：00在医院门口集合'},
+      {phone:11111,name:'aaaa',address:1000,salary:100},
+      {phone:11111,name:'aaaa',address:1000,salary:100},
+      {phone:11111,name:'aaaa',address:1000,salary:100},
+      {phone:11111,name:'aaaa',address:1000,salary:100},
+      {phone:11111,name:'aaaa',address:1000,salary:100},
+      {phone:11111,name:'aaaa',address:1000,salary:100}
+    ]
   },
 
   /**

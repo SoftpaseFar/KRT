@@ -5,33 +5,30 @@
   <view class="topest-search" style="{{search_style}}">
 
     <!-- 搜索框 -->
-    <view>
+    <view bindtap="search">
       <view>
-
         <view class="weui-search-bar">
           <view class="weui-search-bar__form">
 
-
-            <!-- 可编辑时的搜索框 -->
             <view class="weui-search-bar__box">
-              <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+              <!-- <icon class="weui-icon-search_in-box" type="search" size="14"></icon> -->
               <input type="text" class="weui-search-bar__input" placeholder="搜索" />
             </view>
-            <!-- 最初始时的搜索框 -->
+
             <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
               <icon class="weui-icon-search" type="search" size="14"></icon>
               <view class="weui-search-bar__text">搜索</view>
             </label>
           </view>
-          <!-- 取消搜索 -->
-          <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+
         </view>
       </view>
     </view>
 
 
+
   </view>
-  <view class="topest-publish" style="{{top_loc_and_pub_style}}">
+  <view bindtap="publish" class="topest-publish" style="{{top_loc_and_pub_style}}">
     <image src="../../imgs/icons/publish.png"></image>
     <text>发布</text>
   </view>
@@ -60,20 +57,34 @@
 <swiper style="height:{{height}}px" current="{{select}}" duration="300" bindchange="activeSw">
   <swiper-item wx:for="{{sortList.length}}" wx:key="index">
     <view class="box">
-      <view class="place" wx:for="{{placeList}}" wx:key="index">
-
-        <view class="banner-list">
-          {{index}}
-
-
-
-
-
-
-
-
-
+      <!-- 任务列表 -->
+      <view class="place" wx:for="{{sortList[select]['list']}}" wx:key="index">
+        <!-- 上部 -->
+        <view>
+          <text>{{item['name']}}</text>
+          <text> 已报{{item['registered']}}/需要{{item['required']}} 人</text>
         </view>
+
+
+        <!-- 标签 -->
+        <view>
+          <text wx:for="{{item['label']}}" wx:for-item="l_item" wx:key="l_index">{{l_item}}</text>
+        </view>
+
+        <!-- 时间 -->
+        <view>
+          <text>{{item['time']}}</text>
+          <text> {{item['duration']}}</text>
+        </view>
+
+        <!-- 地点 -->
+        <view>
+          <text bindtap="address_plan">{{item['address']}}</text>
+          <text>{{item['salary']}}</text>
+        </view>
+
+
+
       </view>
     </view>
   </swiper-item>

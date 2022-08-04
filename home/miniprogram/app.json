@@ -5,14 +5,29 @@
     "pages/message/message",
     "pages/index/index",
     "pages/mine/mine",
-    "pages/publish/publish"
+    "pages/publish/publish",
+    "pages/historySearch/index",
+    "pages/serve/serve"
   ],
-  "requiredBackgroundModes": ["audio"],
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.18",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "useExtendedLib": {
-    "weui":true
+    "weui": true
   },
   "usingComponents": {
-    "chat-box":"components/chatbox/index",
+    "chat-box": "components/chatbox/index",
     "mp-actionSheet": "weui-miniprogram/actionsheet/actionsheet"
   },
   "tabBar": {

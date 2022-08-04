@@ -1,5 +1,15 @@
-// pages/front_page/front_page.js
-const app = getApp()
+// pages/index/index.js
+
+const app = getApp();
+
+let plugin = requirePlugin('routePlan');
+let key = 'WM7BZ-F2JK2-LRFUO-CSYSH-XJO77-D5FXV'; //使用在腾讯位置服务申请的key
+let referer = '测试'; //调用插件的app的名称
+let endPoint = JSON.stringify({ //终点
+  'name': '潍坊金宝游乐园',
+  'latitude': 36.655792,
+  'longitude': 119.126984
+});
 
 Page({
 
@@ -9,8 +19,8 @@ Page({
    */
   data: {
     //顶部
-    top_loc_and_pub_style:"",
-    search_style:"width: 50%;",
+    top_loc_and_pub_style: "",
+    search_style: "width: 50%;",
 
     //轮播
     background: ['https://tse2-mm.cn.bing.net/th/id/OIP-C.0-8KaD4ntl-KaJrrb-S_KQHaGO?pid=ImgDet&rs=1', 'https://img.zcool.cn/community/01b6bb579393330000018c1b442807.jpg@1280w_1l_2o_100sh.jpg', 'https://img.zcool.cn/community/013d33579393330000012e7ec25322.jpg@1280w_1l_2o_100sh.jpg'],
@@ -20,72 +30,516 @@ Page({
     interval: 2000,
     duration: 500,
 
-    //搜索框
-    inputShowed: false, //初始文本框不显示内容
-
-    //分类栏
+    // 分类栏
     select: 0,
     height: 0,
     sortList: [{
-        name: '门诊陪诊'
+        name: '门诊陪诊',
+        list: [{
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试13', '测试1', '测试13', '测试11', '测试123'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '接送孩子',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试12', '测试12', '测试12', '测试12', '测试12'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '网络培训',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '帮拿快递',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '测试',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '测试一',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '辅导作业1',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '辅导作业2',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+          {
+            name: '辅导作业3',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 1000,
+            address: "山东省日照市东港区",
+          },
+        ]
       },
       {
-        name: '校园生活'
+        name: '校园生活',
+        list: [{
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '接送孩子',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '快递服务',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '网络培训',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+        ]
       },
       {
-        name: '紧急帮助'
+        name: '紧急帮助',
+        list: [{
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试1', '测试1', '测试1', '测试1', '测试1'],
+            salary: 2000,
+            address: "山东省日照市东港区1",
+          },
+        ]
       },
       {
-        name: '特色服务'
+        name: '特色服务',
+        list: [{
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试2', '测试12', '测试21', '测试21', '测试21'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+        ]
       },
       {
-        name: '传统服务'
+        name: '传统服务',
+        list: [{
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          },
+          {
+            name: '辅导作业',
+            time: "2022.9.1",
+            duration: '一星期',
+            required: '90',
+            registered: '60',
+            label: ['测试23', '测试132', '测试231', '测试231', '测试231'],
+            salary: 3000,
+            address: "山东省日照市东港区3",
+          }
+        ]
       },
-      /*
-      {
-        name: '服务1'
-      },
-      {
-        name: '服务2'
-      },
-      {
-        name: '服务3'
-      },
-      {
-        name: '服务5'
-      },*/
+
+
+
     ],
     placeList: [1, 2, 3, 4]
 
 
-
   },
 
-
-  // 使文本框进入可编辑状态
-  showInput: function () {
-    this.setData({
-      inputShowed: true, //设置文本框可以输入内容
-      top_loc_and_pub_style:"display: none;",
-      search_style:"width: 100%;",
+  address_plan() {
+    // 跳转地图
+    wx.navigateTo({
+      url: 'plugin://routePlan/index?key=' + key + '&referer=' + referer + '&endPoint=' + endPoint
     });
   },
-  // 取消搜索
-  hideInput: function () {
-    this.setData({
-      inputShowed: false,
-      top_loc_and_pub_style:"",
-      search_style:"width: 50%;",
-    });
+
+  changeType: function (e) {
+    let {
+      index
+    } = e.currentTarget.dataset;
+    if (this.data.type === index || index === undefined) {
+      return false;
+    } else {
+      this.setData({
+        nav_type: index
+      })
+    }
+
   },
+
+  search() {
+    wx.navigateTo({
+      url: '/pages/historySearch/index',
+      fail(e) {
+        console.log(e)
+      }
+    })
+  },
+  publish() {
+    wx.navigateTo({
+      url: '/pages/publish/publish',
+      fail(e) {
+        console.log(e)
+      }
+    })
+  },
+
 
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad(options) {
-    //分类栏
     this.watchHeight()
+  },
+  showInput(options) {
+    // console.log(options);
   },
 
   /**
@@ -138,11 +592,11 @@ Page({
   },
 
 
-
-  //分类专栏
+  // 分类栏
   // 触发tab导航栏
   activeTab(e) {
-    var index = e.currentTarget.dataset.index
+    var index = e.currentTarget.dataset.index;
+    console.log(index);
     this.setData({
       select: index
     })
@@ -189,6 +643,8 @@ Page({
     })
     this.watchHeight()
   },
+
+
 
 
 })
