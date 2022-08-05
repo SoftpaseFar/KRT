@@ -58,30 +58,58 @@
   <swiper-item wx:for="{{sortList.length}}" wx:key="index">
     <view class="box">
       <!-- 任务列表 -->
-      <view class="place" wx:for="{{sortList[select]['list']}}" wx:key="index">
-        <!-- 上部 -->
-        <view>
-          <text>{{item['name']}}</text>
-          <text> 已报{{item['registered']}}/需要{{item['required']}} 人</text>
+      <view class="place" wx:for="{{sortList[select]['list']}}" wx:key="index" bindtap="enter_server_item" data-item="{{item}}">
+
+        <!-- 名称和薪资 -->
+        <view class="name_and_salary">
+          <text class="name_and_salary_name">{{item['name']}}</text>
+          <text class="name_and_salary_salary">{{item['salary']}}</text>
         </view>
 
+        <!-- 地点、周次、为期、时间、人数 -->
+        <view class="loc_week_du_time">
+          <text catchtap="address_plan">{{item['address']}} | </text>
+          <text> {{item['cycle_time']}} | </text>
+          <text>{{item['time']}} | </text>
+          <text> {{item['duration']}}</text>
+          <text class="loc_week_du_time_reeg"> {{item['registered']}}/{{item['required']}} 人</text>
+        </view>
 
         <!-- 标签 -->
         <view>
-          <text wx:for="{{item['label']}}" wx:for-item="l_item" wx:key="l_index">{{l_item}}</text>
+          <text class="label" wx:for="{{item['label']}}" wx:for-item="l_item" wx:key="l_index">{{l_item}}</text>
         </view>
 
-        <!-- 时间 -->
-        <view>
-          <text>{{item['time']}}</text>
-          <text> {{item['duration']}}</text>
+        <!-- 公司名称、融资、简介、规模 -->
+        <view class="company">
+          <view class="company_img">
+            公司图片
+          </view>
+
+          <view class="company_detail">
+            公司简介
+          </view>
         </view>
 
-        <!-- 地点 -->
-        <view>
-          <text bindtap="address_plan">{{item['address']}}</text>
-          <text>{{item['salary']}}</text>
-        </view>
+
+
+        <!-- <view>
+          <view class="company_img">
+            <image src="{{item['company']['image_url']}}" style="width: 7%;" mode="widthFix"></image>
+          </view>
+
+          <view class="company_detail">
+            <view>
+              <text>{{item['company']['name']}}</text>
+            </view>
+            <view>
+              <text>{{item['company']['financing']}} | </text>
+              <text>{{item['company']['class']}} | </text>
+              <text>{{item['company']['scale']}}</text>
+            </view> 
+          </view>
+
+        </view> -->
 
 
 

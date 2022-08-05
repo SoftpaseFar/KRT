@@ -1,3 +1,4 @@
+
 .topest {
   position: relative;
   width: 100%;
@@ -220,8 +221,86 @@ scroll-view .sort:last-child {
 }
 
 .place {
-  height: 256rpx;
+  height:270rpx;
   margin-top: 2%;
-  background-color: burlywood;
+  /* background-color: burlywood; */
+  border-bottom: 10rpx solid rgb(233, 233, 233);
+
 }
 
+.place view {
+  /* width: 100%; */
+  height: 25%;
+  align-items: center;
+}
+
+
+/* 列表 */
+.name_and_salary {
+  font-size: large;
+  font-weight: 600;
+}
+
+.name_and_salary_name {
+  float: left;
+  margin-left: 2%;
+}
+
+.name_and_salary_salary {
+  float: right;
+  color: rgb(7, 196, 230);
+  margin-right: 2%;
+}
+
+
+.loc_week_du_time {
+  font-size: small;
+  margin-left: 2%;
+
+}
+
+
+
+.loc_week_du_time_reeg {
+  float: right;
+  margin-right: 7%;
+}
+
+.label {
+  display: flex;
+  float: left;
+  margin-left: 2%;
+  background-color: #e7e2e2;
+  /* text-align: center; */
+  font-size: small;
+  /* align-items: center; */
+  padding: 6rpx;
+}
+
+
+
+.company {
+  width: 100%;
+  height: 100%;
+  background-color: darkcyan;
+  display: flex;
+}
+
+
+
+
+.company_img {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  background-color: darkkhaki;
+  margin: 0;
+}
+
+.company_detail {
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  background-color: darkturquoise;
+  margin: 0;
+}
