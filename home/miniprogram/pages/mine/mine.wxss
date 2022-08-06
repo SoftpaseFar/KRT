@@ -1,115 +1,79 @@
-/* pages/mine/mine.wxss */
-/* 使用page就是为了保证  满屏 */
-
-page {
+.top {
   width: 100%;
-  height: 100%;
+  height: 500rpx;
+  background-color: blanchedalmond;
 }
 
-.view_contain {
+.bottom {
   width: 100%;
-  height: 100%;
-  background: #f0eeed
-}
-
-/* 第一部分 */
-
-.view_1 {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 35%;
-  background: #a0deee;
-}
-
-.view_image_text {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.image_radius {
-  height: 50px;
-  width: 50px;
-  border-radius: 30px;
-}
-
-/* 第二部分 */
-
-.view_2 {
-  width: 100%;
-  height: 15%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background: white;
-}
-
-.view_tupianwenzi {
+  /* height: 1000rpx; */
+  /* background-color: white; */
   display: flex;
   flex-direction: column;
-  width: 120rpx;
   align-items: center;
-  margin-left: 25rpx;
-  margin-right: 25rpx;
+
 }
 
-.image_tupian {
-  display: flex;
-  width: 100rpx;
-  height: 100rpx;
+.bottom-top {
+  width: 92%;
+  height: 180rpx;
+  background-color: white;
+  margin-top: -15%;
 }
 
-/* 第三部分 */
+.bottom-top view {
+  width: 25%;
+  height: 100%;
+  background-color: aqua;
+  float: left;
+}
 
-.view_3 {
+
+.bottom-mid {
+  width: 92%;
+  height: 270rpx;
+  background-color: white;
+  margin-top: 2%;
+}
+
+.bottom-bottom {
+  margin-top: 2%;
+  width: 92%;
+  height: 200rpx;
+  background-color: white;
+}
+
+.bottom-mid-top{
   width: 100%;
-  height: 50%;
-  /* background: #f0eeed; */
+  height: 33.3%;
+  background-color: blanchedalmond;
 }
 
-.list-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+
+.bottom-mid-bottom{
   width: 100%;
-  height: 80rpx;
-  margin-top: 20rpx;
-  position: relative; /*父元素位置要设置为相对*/
-  background: white;
+  height: 66.6%;
+  /* background-color: chocolate; */
 }
 
-.item-image {
-  width: 50rpx;
-  height: 50rpx;
-  margin: 20rpx;
+.bottom-mid-bottom view{
+  width: 25%;
+  height: 100%;
+  background-color: aqua;
+  float: left;
 }
 
-.item-text {
-  color: gray;
-  font-size: 35rpx;
-  margin-left: 20rpx;
-}
 
-.image-jiantou {
-  width: 20rpx;
-  height: 35rpx;
-  position: absolute; /* 要约束所在位置的子元素的位置要设置成绝对 */
-  right: 0; /* 靠右调节 */
-  margin-right: 35rpx;
-}
 
-/* 黑线 使得产生阴影效果 */
 
-.line {
-  width: 100%;
-  height: 3rpx;
-  background: lightgray;
-  margin-left: 90rpx;
-}
+
+
+
+
+
+
+
+
 
 
 
@@ -120,75 +84,75 @@ page {
 }
 
 .war_pop {
-  width           : 75rpx;
-  height          : 275rpx;
-  animation       : box-swing 3s infinite ease-in-out;
+  width: 75rpx;
+  height: 275rpx;
+  animation: box-swing 3s infinite ease-in-out;
   transform-origin: top center;
-  position        : absolute;
-  top             : -10rpx;
-  left            : 40px;
+  position: absolute;
+  top: -10rpx;
+  left: 40px;
 }
 
 
 .box {
-  z-index      : 10;
-  display      : block;
-  width        : 75rpx;
-  height       : 75rpx;
+  z-index: 10;
+  display: block;
+  width: 75rpx;
+  height: 75rpx;
   border-radius: 50%;
-  position     : absolute;
-  top          : 200rpx;
-  left         : calc(50% -(75rpx/2));
-  background   : pink;
-  box-shadow   : 5rpx 5rpx 80rpx #e4cedf, 5rpx -5rpx 80rpx #e4cedf, -5rpx 5rpx 80rpx #e4cedf, -5rpx -5rpx 80rpx #e4cedf;
-  cursor       : pointer;
+  position: absolute;
+  top: 200rpx;
+  left: calc(50% -(75rpx/2));
+  background: pink;
+  box-shadow: 5rpx 5rpx 80rpx #e4cedf, 5rpx -5rpx 80rpx #e4cedf, -5rpx 5rpx 80rpx #e4cedf, -5rpx -5rpx 80rpx #e4cedf;
+  cursor: pointer;
 }
 
 .box::before {
-  content                : "";
-  position               : absolute;
-  width                  : 35rpx;
-  height                 : 50rpx;
-  background             : #222;
-  bottom                 : 100%;
-  left                   : calc(50% -(35rpx/2));
-  z-index                : -1;
-  border-top-left-radius : 10rpx;
+  content: "";
+  position: absolute;
+  width: 35rpx;
+  height: 50rpx;
+  background: #222;
+  bottom: 100%;
+  left: calc(50% -(35rpx/2));
+  z-index: -1;
+  border-top-left-radius: 10rpx;
   border-top-right-radius: 10rpx
 }
 
 .box::after {
-  content   : "";
-  position  : absolute;
-  width     : 10rpx;
-  height    : 250rpx;
+  content: "";
+  position: absolute;
+  width: 10rpx;
+  height: 250rpx;
   background: #222;
-  bottom    : 100%;
-  left      : calc(50% - 5rpx);
-  z-index   : -1
+  bottom: 100%;
+  left: calc(50% - 5rpx);
+  z-index: -1
 }
 
 .box .box_view {
-  display   : block;
-  position  : absolute;
-  width     : 2rpx;
-  height    : 30rpx;
+  display: block;
+  position: absolute;
+  width: 2rpx;
+  height: 30rpx;
   background: #222;
-  top       : 2rpx;
-  left      : 28rpx;
+  top: 2rpx;
+  left: 28rpx;
   box-shadow: 17rpx 0 #222;
-  opacity   : 1;
+  opacity: 1;
 }
 
 .box .box_view::after {
-  content   : "";
-  position  : absolute;
-  bottom    : -2rpx;
-  left      : 4rpx;
+  content: "";
+  position: absolute;
+  bottom: -2rpx;
+  left: 4rpx;
   background: #222;
-  width     : 2rpx;
-  height    : 12rpx;
-  display   : block;
+  width: 2rpx;
+  height: 12rpx;
+  display: block;
   box-shadow: 4.5rpx 0 #222, 9rpx 0 #222;
 }
 
@@ -207,40 +171,40 @@ page {
 }
 
 .fix_btn {
-  width   : 100rpx;
-  height  : 100rpx;
+  width: 100rpx;
+  height: 100rpx;
   position: fixed;
-  z-index : 10;
-  bottom  : 220rpx;
-  right   : 20rpx;
+  z-index: 10;
+  bottom: 220rpx;
+  right: 20rpx;
 }
 
 
 .icon {
-  width        : 100%;
-  height       : 100%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
 .total {
-  font-size      : 30rpx;
-  font-weight    : bold;
-  position       : relative;
-  margin-top     : 30rpx;
-  color          : pink;
-  display        : flex;
+  font-size: 30rpx;
+  font-weight: bold;
+  position: relative;
+  margin-top: 30rpx;
+  color: pink;
+  display: flex;
   justify-content: flex-end;
 }
 
 .total::after {
-  content    : attr(data-text);
-  position   : absolute;
-  display    : inline-block;
-  bottom     : -0.7rem;
-  right      : 0.5rem;
-  opacity    : 0.2;
-  z-index    : 0;
-  text-align : right;
+  content: attr(data-text);
+  position: absolute;
+  display: inline-block;
+  bottom: -0.7rem;
+  right: 0.5rem;
+  opacity: 0.2;
+  z-index: 0;
+  text-align: right;
   font-weight: 900;
-  font-size  : 30rpx;
+  font-size: 30rpx;
 }

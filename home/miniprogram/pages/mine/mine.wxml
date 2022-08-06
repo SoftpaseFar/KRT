@@ -1,68 +1,32 @@
-<!--pages/mine/mine.wxml-->
-<view class="view_contain">
-  <!-- 第一部分 -->
-  <view class="view_1">
-    <view class="view_image_text">
-      <image class="image_radius" src="../../imgs/mine/smile.png" />
-      <text>注册/登陆</text>
-    </view>
-  </view>
-  <!-- 第二部分 -->
-  <view class="view_2">
-    <view class="view_tupianwenzi">
-      <image class="image_tupian" src="../../imgs/mine/yifabu.png"></image>
-      <text class="text_saoyisao">已发布</text>
-    </view>
-    <view class="view_tupianwenzi">
-      <image class="image_tupian" src="../../imgs/mine/jinxingzhong.png"></image>
-      <text class="text_saoyisao">进行中</text>
-    </view>
-    <view class="view_tupianwenzi">
-      <image class="image_tupian" src="../../imgs/mine/yiwancheng.png"></image>
-      <text class="text_saoyisao">已完成</text>
-    </view>
-    <view class="view_tupianwenzi">
-      <image class="image_tupian" src="../../imgs/mine/zhanwei.png"></image>
-      <text class="text_saoyisao">占位符</text>
-    </view>
+<view class="top">
 
-  </view>
-  <!-- 第三部分 -->
-  <view class="view_3">
-    <view class="list-item">
-      <image class="item-image" src="../../imgs/mine/yonghushezhi.png"></image>
-      <text class="item-text">用户设置</text>
-      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
-    </view>
-    <view class="line"></view>
-    <view class="list-item">
-      <image class="item-image" src="../../imgs/mine/fuwuzhongxin.png"></image>
-      <text class="item-text">服务中心</text>
-      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
-    </view>
-    <view class="line"></view>
-    <view class="list-item">
-      <image class="item-image" src="../../imgs/mine/gerenjianjie.png"></image>
-      <text class="item-text">个人简介</text>
-      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
-    </view>
-    <view class="line"></view>
-    <view class="list-item">
-      <image class="item-image" src="../../imgs/mine/dingdanguanli.png"></image>
-      <text class="item-text">订单管理</text>
-      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
-    </view>
-    <view class="line"></view>
-    <view class="list-item">
-      <image class="item-image" src="../../imgs/mine/shimingrenzheng.png"></image>
-      <text class="item-text">认证中心</text>
-      <image class="image-jiantou" src="../../imgs/mine/jiantouyou.png"></image>
-    </view>
-    <view class="line"></view>
-  </view>
 </view>
 
+<view class="bottom">
 
+  <view class="bottom-top">
+    <view>11</view>
+    <view>22</view>
+    <view>33</view>
+    <view>55</view>
+  </view>
+
+  <view class="bottom-mid">
+    <view class="bottom-mid-top">11</view>
+    <view class="bottom-mid-bottom">
+    <view>11</view>
+    <view>22</view>
+    <view>33</view>
+    <view>55</view>
+    </view>
+  </view>
+
+
+  <view class="bottom-bottom">
+
+  </view>
+
+</view>
 
 <!-- 灯泡 -->
 <view class="war_pop">
@@ -70,5 +34,3 @@
     <view class="box_view"></view>
   </view>
 </view>
-
-

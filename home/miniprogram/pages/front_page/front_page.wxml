@@ -81,13 +81,21 @@
         </view>
 
         <!-- 公司名称、融资、简介、规模 -->
-        <view class="company">
-          <view class="company_img">
-            公司图片
+        <view class="company" style="height: 40%;">
+          <view class="company_img" style="height: 100%;">
+            <image src="{{item['company']['image_url']}}" style="width: 90%;" mode="widthFix"></image>
           </view>
 
-          <view class="company_detail">
-            公司简介
+          <view class="company_detail" style="height: 100%;">
+            <view class="company_detail_name" style="height: 45%;">
+              <text>{{item['company']['name']}}</text>
+            </view>
+
+            <view class="company_detail_other" style="height: 50%;">
+              <text>{{item['company']['financing']}} | </text>
+              <text>{{item['company']['class']}} | </text>
+              <text>{{item['company']['scale']}}</text>
+            </view> 
           </view>
         </view>
 
