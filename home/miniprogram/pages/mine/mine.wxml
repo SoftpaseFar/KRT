@@ -1,5 +1,8 @@
 <view class="top">
-
+<image class="top-avatar" src="../../imgs/mine/smile.png" mode="widthFix"></image>
+<view class="top-info">
+SpaereAude
+</view>
 </view>
 
 <view class="bottom">
@@ -12,21 +15,61 @@
   </view>
 
   <view class="bottom-mid">
-    <view class="bottom-mid-top">11</view>
+    <view class="bottom-mid-top">
+      <text style="float: left;">祖国统一</text>
+      <text style="float: left;">势不可挡</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
     <view class="bottom-mid-bottom">
-    <view>11</view>
-    <view>22</view>
-    <view>33</view>
-    <view>55</view>
+      <view>11</view>
+      <view>22</view>
+      <view>33</view>
+      <view>55</view>
     </view>
   </view>
 
 
   <view class="bottom-bottom">
-
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
+    <view>
+      <image src="../../imgs/mine/qizhi.png" mode="widthFix"></image>
+      <text>祖国统一</text>
+      <image src="../../imgs/mine/jiantou.png" mode="widthFix"></image>
+    </view>
   </view>
 
 </view>
+
+
 
 <!-- 灯泡 -->
 <view class="war_pop">
