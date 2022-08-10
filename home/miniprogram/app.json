@@ -8,7 +8,9 @@
     "pages/mine/mine",
     "pages/publish/publish",
     "pages/historySearch/index",
-    "pages/serve/serve"
+    "pages/serve/serve",
+    "pages/escort/index",
+    "pages/appointment/index"
   ],
   "plugins": {
     "routePlan": {

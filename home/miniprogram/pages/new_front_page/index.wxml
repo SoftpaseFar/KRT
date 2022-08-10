@@ -46,7 +46,7 @@
   <image class="bg" src='https://gxh.vip.qq.com/xydata/card/item/2432/dynamic.gif'>
   </image>
   <!-- 分类栏目 -->
-  <view class="susu">门诊确诊</view>
+  <view class="susu" bindtap="go_escort">门诊陪诊</view>
   <view class="susu1">婚礼庆典</view>
   <view class="susu2">紧急帮助</view>
 </view>

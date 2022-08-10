@@ -166,4 +166,14 @@ Page({
     })
   },
 
+  // 陪诊
+  go_escort() {
+    wx.navigateTo({
+      url: '/pages/escort/index',
+      fail(e) {
+        console.log(e)
+      }
+    })
+  },
+
 })

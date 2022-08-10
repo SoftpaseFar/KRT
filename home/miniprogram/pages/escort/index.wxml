@@ -1,0 +1,70 @@
+<view class="topest">
+  <view class="topest-location" style="{{top_loc_and_pub_style}}">
+    <text>中国大地</text>
+  </view>
+  <view class="topest-search" style="{{search_style}}">
+
+    <!-- 搜索框 -->
+    <view bindtap="search">
+      <view>
+        <view class="weui-search-bar">
+          <view class="weui-search-bar__form">
+
+            <view class="weui-search-bar__box">
+              <!-- <icon class="weui-icon-search_in-box" type="search" size="14"></icon> -->
+              <input type="text" class="weui-search-bar__input" placeholder="搜索" />
+            </view>
+
+            <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+              <icon class="weui-icon-search" type="search" size="14"></icon>
+              <view class="weui-search-bar__text">搜索</view>
+            </label>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+  <view bindtap="publish" class="topest-publish" style="{{top_loc_and_pub_style}}">
+    <image src="../../imgs/icons/publish.png"></image>
+    <text>占位</text>
+  </view>
+</view>
+<view style="clear: both;height: 10rpx;"></view>
+<!-- 轮播图 -->
+<view>
+  <swiper class="carousel" indicator-dots="true" autoplay="true" duration="500" easing-function="easeInOutCubic">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 分类栏 -->
+<view class="banner">
+  <scroll-view scroll-x="true" scroll-with-animation="true" scroll-into-view="nav-{{select > 0 ? select -1 : select}}">
+    <view wx:for="{{sortList}}" wx:for-index="index" wx:key="index" id="nav-{{index}}" class="sort {{index == select ? 'choose' : ''}}" data-index='{{index}}' bindtap="activeTab">
+      {{item.name}}
+      <view class="line" wx:if="{{index == select}}"></view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<swiper style="height:{{height}}px" current="{{select}}" duration="300" bindchange="activeSw">
+  <swiper-item>
+    <view class="box">
+    </view>
+  </swiper-item>
+</swiper>
+
+
+<view class="classification" wx:for="{{sortList[select]['list']}}"  wx:key="item" data-url="{{item['url']}}">
+<image src="{{item['image_url']}}" mode="widthFix"></image>
+  <text>{{item['name']}}</text>
+</view>

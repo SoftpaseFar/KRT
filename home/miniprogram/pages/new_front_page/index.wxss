@@ -21,10 +21,11 @@
   background-color: rgba(138, 44, 226,0.6);
   border-top-right-radius: 15rpx;
   border-bottom-right-radius: 15rpx;
-
+  text-align: center;
 }
 
 .top_options_publish {
+  text-align: center;
   z-index: 18;
   position:absolute;
   top:1%;

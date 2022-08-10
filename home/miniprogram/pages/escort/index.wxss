@@ -1,0 +1,350 @@
+.topest {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 10rpx;
+  background-color: #EFEFF4;
+}
+
+
+.topest-location {
+  background-color: #EFEFF4;
+  position: relative;
+  border: 2rpx solid slategrey;
+  float: left;
+  width: 23%;
+  border-radius: 5px;
+  margin: 0 1%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+
+}
+
+.topest-location text {
+
+  margin: 10px auto;
+}
+
+.topest-search {
+  float: left;
+  position: relative;
+}
+
+
+.topest-publish {
+  background-color: #EFEFF4;
+  position: relative;
+  border: 2rpx solid slategrey;
+  float: left;
+  width: 23%;
+  border-radius: 5px;
+  margin: 0 1%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+}
+
+
+
+
+
+.topest-publish image {
+  width: 50rpx;
+  height: 50rpx;
+  align-self: center;
+  margin: 0 0 0 20rpx;
+}
+
+.topest-publish text {
+  margin: 10px auto;
+}
+
+
+
+/* 轮播图*/
+.carousel image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 搜索框 */
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  /* background-color: red; */
+  background-color: #EFEFF4;
+  /* border-top: 1rpx solid #D7D6DC; */
+  /* border-bottom: 1rpx solid #D7D6DC; */
+  /* background-color: slategrey; */
+  /* background-color: navajowhite; */
+}
+
+.weui-icon-search {
+  margin-right: 4px;
+  font-size: inherit;
+  /* background-color: red; */
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 16px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 5px;
+  /* background: red; */
+  /* border: 1rpx solid #E6E6EA; */
+
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.weui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  /* color: #9B9B9B; */
+  /* background: #FFFFFF; */
+  line-height: 28px;
+
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  /* color: #09BB07; */
+  white-space: nowrap;
+}
+
+
+
+
+/* 分类栏 */
+.banner {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  border-top: 1rpx solid #f5f5f5;
+  border-bottom: 1rpx solid #f5f5f5;
+  z-index: 10;
+}
+
+.banner scroll-view {
+  height: 100%;
+}
+
+.sort {
+  position: relative;
+  display: inline-block;
+  font-size: 38rpx;
+  margin-right: 70rpx;
+  line-height: 80rpx;
+  height: 100%;
+}
+
+scroll-view .sort:last-child {
+  margin-right: 0rpx;
+}
+
+.choose {
+  color: #16BA98;
+}
+
+.line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5rpx;
+  border-radius: 10rpx;
+  background: #16BA98;
+  animation: spread .3s;
+}
+
+@keyframes spread {
+  0% {
+    width: 0;
+    left: 50%;
+  }
+
+  100% {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.place {
+  height: 320rpx;
+  margin-top: 2%;
+  /* background-color: burlywood; */
+  border-bottom: 10rpx solid rgb(233, 233, 233);
+
+}
+
+.place view {
+  /* width: 100%; */
+  height: 20%;
+  align-items: center;
+}
+
+
+
+
+/* 列表 */
+.name_and_salary {
+  font-size: large;
+  font-weight: 600;
+}
+
+.name_and_salary_name {
+  float: left;
+  margin-left: 2%;
+}
+
+.name_and_salary_salary {
+  float: right;
+  color: rgb(7, 196, 230);
+  margin-right: 2%;
+}
+
+
+.loc_week_du_time {
+  font-size: small;
+  margin-left: 2%;
+
+}
+
+
+
+.loc_week_du_time_reeg {
+  float: right;
+  margin-right: 7%;
+}
+
+.label {
+  display: flex;
+  float: left;
+  margin-left: 2%;
+  background-color: #e7e2e2;
+  /* text-align: center; */
+  font-size: small;
+  /* align-items: center; */
+  padding: 6rpx;
+}
+
+
+
+.company {
+  width: 100%;
+  display: flex;
+  /* border: 5rpx solid rgb(rgb(0, 0, 0), green, blue); */
+}
+
+
+
+
+.company_img {
+  display: inline-block;
+  width: 20%;
+  height: 100%;
+  /* background-color: darkkhaki; */
+  margin: 0;
+  /* background-color: salmon; */
+  border: #f0f0f0 solid 1rpx;
+}
+
+
+
+.company_detail {
+  display: inline-block;
+  width: 80%;
+  height: 100%;
+  /* background-color: darkturquoise; */
+  /* align-self: center; */
+
+  /* align-content: center; */
+}
+
+
+.company_detail_name {
+  width: 98%;
+  margin-left: 2%;
+  font-size: medium;
+  font-weight: 400;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin-top: 5%;
+  /* background-color: green; */
+}
+
+
+.company_detail_other {
+  width: 98%;
+  margin-left: 2%;
+  font-size: small;
+  font-weight: 400;
+  /* background-color: cadetblue; */
+  margin-bottom: 2%;
+  /* display: flex;
+  
+  justify-content: center;
+  align-items: center; */
+}
+
+
+/* 分类 */
+.classification {
+  float: left;
+  width: 23.75%;
+  margin-left: 1%;
+  margin-top: 1%;
+  background-color: #16BA98;
+  text-align: center;
+}
