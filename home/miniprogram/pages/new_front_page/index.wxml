@@ -1,0 +1,52 @@
+<!-- 帮助与发布 -->
+<view class="top_options">
+  <view class="top_options_help" bindtap="{{top_help?'help_effect_open':'help_effect_close'}}" data-name=".top_options_help">帮忙</view>
+  <view class="top_options_publish" bindtap="{{top_publish?'help_effect_open':'help_effect_close'}}" data-name=".top_options_publish">发布</view>
+</view>
+
+<!-- 定位与搜索 -->
+<view class="pos_and_search">
+  <view class="topest-location">
+    <text>中国大地</text>
+  </view>
+
+  <view class="topest-search"  bindtap="search">
+    <!-- 搜索框 -->
+    <view>
+      <label class="weui-search-bar__label">
+        <icon class="weui-icon-search" type="search" size="14"></icon>
+        <view class="weui-search-bar__text">搜索</view>
+      </label>
+    </view>
+  </view>
+
+</view>
+
+<!-- 报警 -->
+<view class="call_the_police" bindlongpress="call_110">长按报警</view>
+
+<!-- 论坛 -->
+<view class="call_the_forum" bindlongpress="call_forum">长按论坛</view>
+
+<!-- 轮播图 -->
+<view>
+  <swiper class="imageContainer" bindchange="handleChange" previous-margin="50rpx" next-margin="50rpx" circular autoplay>
+    <block wx:for="{{background}}" wx:key="item">
+      <swiper-item class="item">
+        <image class="itemImg {{currentIndex == index ? 'active': ''}}" src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+</view>
+
+
+<!-- 背景 -->
+<view class="bg_view">
+  <image class="bg" src='https://gxh.vip.qq.com/xydata/card/item/2432/dynamic.gif'>
+  </image>
+  <!-- 分类栏目 -->
+  <view class="susu">门诊确诊</view>
+  <view class="susu1">婚礼庆典</view>
+  <view class="susu2">紧急帮助</view>
+</view>

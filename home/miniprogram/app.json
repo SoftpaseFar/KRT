@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/new_front_page/index",
     "pages/front_page/front_page",
     "pages/featured/featured",
     "pages/message/message",
@@ -33,7 +34,7 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/front_page/front_page",
+        "pagePath": "pages/new_front_page/index",
         "text": "首页",
         "iconPath": "imgs/icons/index.png",
         "selectedIconPath": "imgs/icons/index2.png"

@@ -1,0 +1,319 @@
+/* 帮忙与帮助 */
+.top_options {
+  margin-top: 2%;
+  width: 100%;
+  /* height: 30%; */
+  height: 100rpx;
+  /* background-color: burlywood; */
+  /* z-index: 10; */
+}
+
+.top_options_help {
+  /* height: 10%; */
+  z-index: 18;
+  position:absolute;
+  top:1%;
+  width: 7%;
+  /* height: 100%; */
+  height: 100rpx;
+  left: 0;
+  /* float: left; */
+  background-color: rgba(138, 44, 226,0.6);
+  border-top-right-radius: 15rpx;
+  border-bottom-right-radius: 15rpx;
+
+}
+
+.top_options_publish {
+  z-index: 18;
+  position:absolute;
+  top:1%;
+  width: 7%;
+  /* height: 100%; */
+  height: 100rpx;
+  right: 0;
+  background-color: rgba(138, 44, 226,0.6);
+  border-top-left-radius: 15rpx;
+  border-bottom-left-radius: 15rpx;
+  /* z-index: 10; */
+}
+
+
+/* 报警 */
+.call_the_police {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: rgba(250, 96, 96, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+}
+
+/* 论坛 */
+.call_the_forum {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: rgba(250, 96, 96, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+}
+
+
+/* 轮播 */
+.imageContainer {
+  width: 100%;
+  height: 500rpx;
+  /* background: #000; */
+}
+
+.item {
+  height: 500rpx;
+}
+
+.itemImg {
+  position: absolute;
+  width: 100%;
+  height: 380rpx;
+  border-radius: 15rpx;
+  z-index: 5;
+  opacity: 0.7;
+  top: 13%;
+}
+
+.active {
+  opacity: 1;
+  z-index: 10;
+  height: 430rpx;
+  top: 7%;
+  transition: all .2s ease-in 0s;
+}
+
+
+/* 定位于搜索 */
+.pos_and_search {
+  z-index: 3;
+  width: 100%;
+  height: 100rpx;
+  /* background-color: burlywood; */
+  position: absolute;
+  top: 0;
+  margin-top: 2%;
+}
+
+/* 背景 */
+.bg_view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -200;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -5;
+}
+
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 0;
+}
+
+/* 分类栏 */
+.susu {
+  position: absolute;
+  /* bottom: 300rpx; */
+  top: 610rpx;
+  /* left: 50%; */
+  width: 90%;
+  height: 180rpx;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 3rpx 40rpx rgba(0, 0, 0, 0.36);
+  border-radius: 33rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 50rpx;
+  z-index: 1;
+}
+
+.susu1 {
+  position: absolute;
+  /* bottom: 300rpx; */
+  top: 820rpx;
+  /* left: 50%; */
+  width: 90%;
+  height: 180rpx;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 3rpx 40rpx rgba(0, 0, 0, 0.36);
+  border-radius: 33rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 50rpx;
+  z-index: 1;
+}
+
+
+.susu2 {
+  position: absolute;
+  /* bottom: 300rpx; */
+  top: 1020rpx;
+  /* left: 50%; */
+  width: 90%;
+  height: 180rpx;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 3rpx 40rpx rgba(0, 0, 0, 0.36);
+  border-radius: 33rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 50rpx;
+  z-index: 1;
+  /* border-bottom-right-radius: 5000%; */
+}
+
+
+/* 顶部定位于搜索框 */
+.topest-location {
+  background-color: rgba(74, 165, 201, 0.1);
+  position: relative;
+  border: 3rpx solid rgba(0, 0, 0, 0.2);
+  float: left;
+  width: 23%;
+  border-radius: 5px;
+  margin: 1% 2% 0 10%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  /* background-color: black; */
+}
+
+.topest-location text {
+  margin: 10px auto;
+}
+
+.topest-search {
+  float: left;
+  position: relative;
+  width: 56%;
+  /* background-color: black; */
+  height: 100%;
+  /* z-index: 1000; */
+  /* align-content: ; */
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+
+/* 搜索框 */
+.weui-search-bar {
+  position: relative;
+  padding: 8px 10px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  border: rgba(0, 0, 0, 0.36);
+
+  /* border-top: 1rpx solid #D7D6DC; */
+  /* border-bottom: 1rpx solid #D7D6DC; */
+
+}
+
+.weui-icon-search {
+  margin-right: 4px;
+  font-size: inherit;
+  /* background-color: red; */
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 16px;
+
+}
+
+.weui-search-bar__form {
+
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  /* border-radius: 155px; */
+  /* background: red; */
+  /* border: 1rpx solid #E6E6EA; */
+
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  /* box-sizing: border-box; */
+  z-index: 1;
+  /* background-color: rgba(250, 96, 96, 0.3); */
+}
+
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+
+}
+
+.weui-search-bar__label {
+  /* align-self: center; */
+  margin-top: 3%;
+  width: 100%;
+  height: 80%;
+  /* position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; */
+  z-index: 2;
+  border: rgba(0, 0, 0, 0.2) solid 3rpx;
+  border-radius: 3px;
+  text-align: center;
+  /* color: #9B9B9B; */
+  /* background: #FFFFFF; */
+  line-height: 28px;
+  background-color:rgba(0, 0, 0, 0);
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  /* color: #09BB07; */
+  white-space: nowrap;
+}
