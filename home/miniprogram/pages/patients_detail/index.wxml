@@ -24,15 +24,20 @@
 
       <view class='order_item cart-list' data-index="{{index}}" bindtouchstart="touchS" bindtouchmove="touchM">
 
-        <image src="../../imgs/other/patient_select.png" wx:if="{{item.selected}}" data-index="{{index}}" class="cart-pro-select" catchtap="selectList"></image>
+
+        <view class="item_select">
+          <image src="../../imgs/other/patient_select.png" wx:if="{{item.selected}}" data-index="{{index}}" class="cart-pro-select" catchtap="selectList"></image>
         <image src="../../imgs/other/patient_uncheck.png" wx:else class="cart-pro-select" data-index="{{index}}" catchtap="selectList"></image>
+        </view>
+        
+          <view class="item_detail">
+            <view>{{item.name}} {{item.sex}}</view>
+            <view>{{item.phone_num}}</view>
+            <view>{{item.id_num}}</view>
+          </view>
 
-        <view class="cart-thumb">{{item.name}}</view>
 
-        <view style="background-color: blueviolet;">1111111111111111111</view>
-        <view>11111</view>
-        <view>11111a</view>
-        <view style="background-color: blueviolet;">111</view>
+
 
 
       </view>
@@ -47,45 +52,6 @@
 
 </view>
 
-
-
-
-<view class="has">
-  <view class="hd" wx:if="{{patients_detail.length!=0}}">
-    共{{patients_detail.length}}个人
-
-  </view>
-
-  <view class="content" wx:if="{{patients_detail.length != 0}}">
-    <block wx:for="{{patients_detail}}" wx:key="index">
-
-      <view class="order_wrapper {{item.status ? '':'active'}}">
-
-        <view class='order_item cart-list' data-index="{{index}}" bindtouchstart="touchS" bindtouchmove="touchM">
-
-          <image src="../../imgs/other/patient_select.png" wx:if="{{item.selected}}" data-index="{{index}}" class="cart-pro-select" catchtap="selectList"></image>
-          <image src="../../imgs/other/patient_uncheck.png" wx:else class="cart-pro-select" data-index="{{index}}" catchtap="selectList"></image>
-
-          <view class="cart-thumb">{{item.name}}</view>
-
-          <view style="background-color: blueviolet;">11111111111111111111111111111111111</view>
-          <view>11111</view>
-          <view>11111a</view>
-          <view style="background-color: blueviolet;">111</view>
-          <view>222</view>
-
-          111
-        </view>
-
-        <view class="del_button" data-index="{{index}}" data-type="single" bindtap='deleteList'>删除</view>
-
-      </view>
-
-    </block>
-  </view>
-
-
-</view>
 
 
 <button style="margin-top: 5%;" type="primary" bindtap="add_patient">添加就诊人</button>

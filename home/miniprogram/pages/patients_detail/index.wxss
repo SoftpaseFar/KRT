@@ -39,7 +39,7 @@ page {
 
 .cart-list {
   position: relative;
-  padding: 0 0 0 261rpx;
+  /* padding: 0 0 0 261rpx; */
   height: 200rpx;
 }
 
@@ -232,7 +232,7 @@ page {
   margin-bottom: 10rpx;
   padding: 30rpx 20rpx;
   /* border: 1px solid red; */
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .order_wrapper .order_item {
@@ -312,3 +312,28 @@ page {
 
 
 
+.item_select{
+  width: 10%;
+  height: 200rpx;
+  /* background-color: bisque; */
+  float: left;
+}
+
+
+.item_detail{
+  width: 90%;
+  height: 200rpx;
+  /* background-color: rgb(207, 137, 137); */
+  float: right;
+}
+
+
+.item_detail view{
+  padding-left: 5%;
+  width: 100%;
+  height: 33.3%;
+  font-size: large;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  background-color: rgba(187, 187, 187,0.2);
+}
