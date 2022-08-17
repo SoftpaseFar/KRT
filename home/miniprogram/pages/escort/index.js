@@ -251,7 +251,24 @@ Page({
       }
     })
   },
+  go_detail(e){
+    var url = e.currentTarget.dataset.url;
+    wx.navigateTo({
 
-  
+      url: url,
+      
+      fail(e) {
+        console.log(e)
+      }
+    })
+  },
+
+    // 拨打110
+    call_110() {
+      wx.vibrateShort(); // 1、使手机震动15ms
+      wx.makePhoneCall({
+        phoneNumber: '110',
+      })
+    },
 
 })

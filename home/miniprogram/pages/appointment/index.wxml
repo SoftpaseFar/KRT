@@ -1,2 +1,44 @@
-<!--pages/appointment/index.wxml-->
-<text>pages/appointment/index.wxml</text>
+<form catchsubmit="form_submit">
+
+  <view class="entry">
+    <text>医院：</text>
+    <picker name="yy" bindchange="hospitals_change" mode="selector" range="{{hospitals}}" value="{{hospitals_index}}">
+      <label> {{hospitals_index==-1?"请选择医院":hospitals[hospitals_index]}}</label>
+    </picker>
+  </view>
+
+
+  <view class="entry" name="jzr">
+    <text>就诊人：</text>
+    <image src="../../imgs/other/bianji.png" mode="widthFix" bindtap="go_jzr_page"></image>
+    <!-- <label >编辑就诊人</label> -->
+  </view>
+
+  <block wx:for="{{patients_detail}}" wx:key="item">
+    <view class="patient_style">
+      {{item['name']}} : {{item['id_num']}}
+    </view>
+  </block>
+
+
+  <view class="entry">
+    <text>就诊时间：</text>
+    <picker name="sj" bindchange="time_change" mode="date">
+      <label>{{time_select}}</label>
+    </picker>
+  </view>
+
+
+  <view class="entry">
+    <text>就诊科室：</text>
+    <picker name="ks" bindchange="department_change" mode="selector" range="{{departments}}" value="{{department_index}}">
+      <label> {{department_index==-1?"请选择科室":departments[department_index]}}</label>
+    </picker>
+  </view>
+
+  <textarea name="bz" class="textarea" bindinput="bindinput" maxlength="1000" auto-focus="true" auto-height="true" placeholder="备注："></textarea>
+
+
+
+  <button style="margin: 30rpx 0" type="primary" formType="submit">下单</button>
+</form>

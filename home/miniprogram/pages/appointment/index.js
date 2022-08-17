@@ -5,6 +5,29 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // 医院 
+    hospitals: ['中国人民解放军总医院', '医院1', '医院2', '医院3', '医院4', '医院5'],
+    hospitals_index: -1,
+    // 日期
+    time_select: "请选择时间",
+    // 科室
+    departments: ['科室0', '科室1', '科室2', '科室3', '科室4', '科室5'],
+    department_index: -1,
+    // 就诊人
+    patients_detail: [{
+        "name": "蔡英文",
+        "sex":"男",
+        "phone_num":"13053628764",
+        "id_num": "370711199898081210"
+      },
+      {
+        "name": "测试",
+        "sex":"女",
+        "phone_num":"13053628766",
+        "id_num": "370711199898081211"
+      }
+    ],
+
 
   },
 
@@ -62,5 +85,52 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  form_submit(e) {
+    console.log(e.detail.value);
+  },
+  hospitals_change(e) {
+    this.setData({
+      hospitals_index: e.detail.value
+    });
+  },
+
+  time_change(e) {
+    // console.log(e.detail.value);
+    this.setData({
+      time_select: e.detail.value
+    });
+  },
+
+  department_change(e) {
+    this.setData({
+      department_index: e.detail.value
+    });
+  },
+
+  go_jzr_page() {
+    wx.navigateTo({
+      url: '/pages/patients_detail/index',
+      fail(e) {
+        console.log(e)
+      }
+    })
+  },
+
+
+
+
+  // 备注
+  bindinput(e) {
+    this.setData({
+      content: e.detail.value
+    })
+  },
+
+
+
+
+
+
 })

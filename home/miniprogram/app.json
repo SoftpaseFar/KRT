@@ -10,7 +10,10 @@
     "pages/historySearch/index",
     "pages/serve/serve",
     "pages/escort/index",
-    "pages/appointment/index"
+    "pages/appointment/index",
+    "pages/patient/index",
+    "pages/patients_detail/index",
+    "pages/add_patient/index"
   ],
   "plugins": {
     "routePlan": {

@@ -1,4 +1,5 @@
 <view class="topest">
+<!-- 定位 -->
   <view class="topest-location" style="{{top_loc_and_pub_style}}">
     <text>中国大地</text>
   </view>
@@ -63,8 +64,12 @@
   </swiper-item>
 </swiper>
 
-
-<view class="classification" wx:for="{{sortList[select]['list']}}"  wx:key="item" data-url="{{item['url']}}">
+<!-- 具体分类 -->
+<view bindtap="go_detail" class="classification" wx:for="{{sortList[select]['list']}}"  wx:key="item" data-url="{{item['url']}}">
 <image src="{{item['image_url']}}" mode="widthFix"></image>
   <text>{{item['name']}}</text>
 </view>
+
+
+<!-- 报警 -->
+<view class="call_the_police" bindlongpress="call_110">长按报警</view>

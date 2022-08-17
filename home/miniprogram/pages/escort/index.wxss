@@ -348,3 +348,20 @@ scroll-view .sort:last-child {
   background-color: #16BA98;
   text-align: center;
 }
+
+
+
+/* 报警 */
+.call_the_police {
+  position: absolute;
+  bottom: 2%;
+  right: 2%;
+  width: 150rpx;
+  height: 150rpx;
+  background-color: rgba(250, 96, 96, 0.3);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 900;
+}

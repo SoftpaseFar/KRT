@@ -1,1 +1,91 @@
-/* pages/appointment/index.wxss */
+
+.entry {
+  margin-top: 2%;
+  width: 100%;
+  height: 80rpx;
+  /* background-color: blueviolet; */
+  line-height: 80rpx;
+  font-weight: 500;
+  border-bottom: rgba(141, 141, 141, 0.1) solid 5rpx;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.entry text {
+  /* width: 10%; */
+  float: left;
+  margin-left: 2%;
+}
+
+.entry label {
+  float: right;
+  margin-right: 5%;
+  opacity: 0.5;
+}
+
+.entry image{
+  float: right;
+  width: 6%;
+  /* background-color: blueviolet; */
+  margin-right: 5%;
+  margin-top: 2%;
+  opacity: 0.5;
+}
+
+
+.patient_style{
+  width: 100%;
+  background-color: rgba(175, 175, 175,0.2);
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
+}
+
+
+
+/* 备注 */
+.textarea {
+  
+  margin: auto;
+  margin-top: 2%;
+  padding: 32rpx;
+  box-sizing: content-box;
+  /*文本内容的宽度 */
+  width: 622rpx;
+  /*文本内容的高度  等于 content中提示文案的行数*行高 */
+  min-height: 448.8rpx;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 32rpx;
+  font-weight: 400;
+  /* 行高  可以根据 bindlinechange 中的e.detail.lineHeigth 可以得到 */
+  line-height: 40.8rxp;
+  border: 1rpx solid #cccccc;
+  border-radius: 16rpx;
+  background-color: #F7F9FD;
+
+  position: relative;
+}
+
+.textarea.placeholder::before {
+  margin: 0;
+  padding: 0;
+  width: 622rpx;
+  display: block;
+  /* \A表示换行 */
+
+  white-space: pre-wrap;
+  font-size: 32rpx;
+  color: #878787;
+  box-sizing: border-box;
+  line-height: 40.8rpx;
+  /*设置固定定位 */
+  position: absolute;
+  top: 32rpx;
+  right: 32rpx;
+  left: 32rpx;
+}
+
+
