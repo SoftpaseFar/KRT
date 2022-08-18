@@ -1,1 +1,29 @@
-/* pages/add_patient/index.wxss */
+.entry{
+  margin-top: 2%;
+  width: 100%;
+  height: 80rpx;
+  /* background-color: blueviolet; */
+  line-height: 80rpx;
+  font-weight: 500;
+  border-bottom: rgba(141, 141, 141, 0.1) solid 5rpx;
+  text-align: center;
+  /* align-items: center; */
+}
+
+.entry text{
+  /* width: 10%; */
+  float: left;
+  margin-left: 2%;
+}
+
+.entry input{
+  float: right;
+  /* margin-right: 1%; */
+  opacity: 0.5;
+  /* background-color: lawngreen; */
+}
+
+.select_sex{
+  /* margin-right: 1%; */
+  background-color: lawngreen;
+}

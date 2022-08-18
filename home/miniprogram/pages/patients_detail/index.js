@@ -32,6 +32,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    // console.log(111);
+    var select_patients_detail = JSON.parse(options.data);
+    // console.log(select_patients_detail);
+    var patients_detail = this.data.patients_detail;
+    let calculation = 0;
+    let selectAllStatus = false;
+    patients_detail.forEach(function (item) {
+      select_patients_detail.forEach(function (select_item) {
+        if (select_item.id_num == item.id_num && select_item.selected) {
+          item.selected = true;
+          calculation = calculation + 1;
+        }
+      })
+    });
+    if (calculation == patients_detail.length) {
+      selectAllStatus = true;
+    }
+    this.setData({
+      selectAllStatus: selectAllStatus,
+      calculation: calculation,
+      patients_detail: patients_detail
+    });
 
   },
 
@@ -59,8 +81,8 @@ Page({
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload() {
-
+  onUnload(options) {
+    // console.log(JSON.parse(options.data));
   },
 
   /**
@@ -234,6 +256,39 @@ Page({
       patients_detail: patients_detail
     })
   },
+
+  // 确定 
+  goConfirm() {
+    var patients_detail = [];
+    this.data.patients_detail.forEach(function (item) {
+      if (item.selected) {
+        patients_detail.push(item);
+      }
+    });
+    // console.log(patients_detail);
+    var pages = getCurrentPages(); //当前页面
+    var beforePage = pages[pages.length - 2]; //前一页
+    // beforePage.data.select_patients_detail = patients_detail;
+    // console.log(beforePage.data.select_patients_detail);
+    beforePage.setData({
+      select_patients_detail: patients_detail,
+    });
+    beforePage.onLoad(); // 执行前一个页面的onLoad方法
+    wx.navigateBack({
+      delta: 1
+    });
+
+  },
+
+
+  add_patient() {
+    wx.navigateTo({
+      url: '/pages/add_patient/index',
+      fail(e) {
+        console.log(e);
+      }
+    })
+  }
 
 
 })

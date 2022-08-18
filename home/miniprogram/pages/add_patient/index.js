@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    radio_select:['男','女'],
   },
 
   /**
@@ -47,7 +47,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-
+    
   },
 
   /**
@@ -62,5 +62,9 @@ Page({
    */
   onShareAppMessage() {
 
-  }
+  },
+
+  form_submit(){
+    console.log("提交并保存");
+  },
 })

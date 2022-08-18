@@ -14,7 +14,7 @@
     <!-- <label >编辑就诊人</label> -->
   </view>
 
-  <block wx:for="{{patients_detail}}" wx:key="item">
+  <block wx:for="{{select_patients_detail}}" wx:key="item">
     <view class="patient_style">
       {{item['name']}} : {{item['id_num']}}
     </view>
