@@ -23,7 +23,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-      // console.log(this.data.select_patients_detail);
+    // console.log(this.data.select_patients_detail);
   },
 
   /**
@@ -101,7 +101,7 @@ Page({
     var data = JSON.stringify(this.data.select_patients_detail);
     // console.log();
     wx.navigateTo({
-      url: '/pages/patients_detail/index?data='+data,
+      url: '/pages/patients_detail/index?data=' + data,
       fail(e) {
         console.log(e)
       }

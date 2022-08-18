@@ -193,7 +193,7 @@ Page({
   // 触发tab导航栏
   activeTab(e) {
     var index = e.currentTarget.dataset.index;
-    console.log(index);
+    // console.log(index);
     this.setData({
       select: index
     })

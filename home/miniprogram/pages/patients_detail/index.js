@@ -4,6 +4,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    back_code: -1,
     calculation: 0,
     selectAllStatus: false,
     startX: '',
@@ -32,28 +33,35 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    // console.log(111);
-    var select_patients_detail = JSON.parse(options.data);
-    // console.log(select_patients_detail);
-    var patients_detail = this.data.patients_detail;
-    let calculation = 0;
-    let selectAllStatus = false;
-    patients_detail.forEach(function (item) {
-      select_patients_detail.forEach(function (select_item) {
-        if (select_item.id_num == item.id_num && select_item.selected) {
-          item.selected = true;
-          calculation = calculation + 1;
-        }
-      })
-    });
-    if (calculation == patients_detail.length) {
-      selectAllStatus = true;
+    if (this.data.back_code == -1) {
+      // console.log(111);
+      var select_patients_detail = JSON.parse(options.data);
+      // console.log(select_patients_detail);
+      var patients_detail = this.data.patients_detail;
+      let calculation = 0;
+      let selectAllStatus = false;
+      patients_detail.forEach(function (item) {
+        select_patients_detail.forEach(function (select_item) {
+          if (select_item.id_num == item.id_num && select_item.selected) {
+            item.selected = true;
+            calculation = calculation + 1;
+          }
+        })
+      });
+      if (calculation == patients_detail.length) {
+        selectAllStatus = true;
+      }
+      this.setData({
+        selectAllStatus: selectAllStatus,
+        calculation: calculation,
+        patients_detail: patients_detail
+      });
+    } else {
+      this.setData({
+        back_code: -1,
+      });
     }
-    this.setData({
-      selectAllStatus: selectAllStatus,
-      calculation: calculation,
-      patients_detail: patients_detail
-    });
+
 
   },
 
@@ -282,8 +290,9 @@ Page({
 
 
   add_patient() {
+    var data = JSON.stringify(this.data.patients_detail);
     wx.navigateTo({
-      url: '/pages/add_patient/index',
+      url: '/pages/add_patient/index?data=' + data,
       fail(e) {
         console.log(e);
       }
