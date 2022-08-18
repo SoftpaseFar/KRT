@@ -2,14 +2,14 @@
 
   <view class="entry">
     <text>请输入姓名：</text>
-    <input confirm-type="done" type="text" placeholder="请您输入姓名" />
+    <input name="name" confirm-type="done" type="text" placeholder="请您输入姓名" />
   </view>
 
 
-  <view class="entry">
+  <view class="entry" style="margin-bottom: 3%;">
     <text>请选择性别：</text>
 <view class="select_sex">
-  <radio-group>
+  <radio-group name="sex">
       <block wx:for="{{radio_select}}" wx:key="item">
         <radio checked="{{index==0?true:false}}" value="{{item}}" />{{item}}
       </block>
@@ -19,12 +19,12 @@
 
   <view class="entry">
     <text>输入手机号：</text>
-    <input confirm-type="done" type="idcard" placeholder="请输入手机号" />
+    <input name="phone_num" confirm-type="done" type="idcard" placeholder="请输入手机号" />
   </view>
 
   <view class="entry">
     <text>输入身份证：</text>
-    <input confirm-type="done" type="idcard" placeholder="输入身份证号" />
+    <input name="id_num" confirm-type="done" type="idcard" placeholder="输入身份证号" />
   </view>
 
 

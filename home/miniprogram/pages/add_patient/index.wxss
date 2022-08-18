@@ -25,5 +25,8 @@
 
 .select_sex{
   /* margin-right: 1%; */
-  background-color: lawngreen;
+  float: right;
+  margin-right: 10%;
+  /* background-color: lawngreen; */
+  /* margin-bottom: %; */
 }

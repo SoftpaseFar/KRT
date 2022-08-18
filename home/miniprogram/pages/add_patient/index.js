@@ -64,7 +64,8 @@ Page({
 
   },
 
-  form_submit(){
-    console.log("提交并保存");
+  form_submit(e){
+    var form_info = e.detail.value;
+    
   },
 })
